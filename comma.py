@@ -5,10 +5,12 @@ while True:
 	spam=spam+[element]
 	if element=="q":
 		break
+		spam=spam+[element]
 n=len(spam)
-last = spam[-1]
+last = spam[-2]
 newspam = spam
+newspam.pop()
 newspam.pop() #pops out the last value in the list newspam
-for i in range(n-1):
+for i in range(n-2):
 	print(newspam[i] + ',',end='')
 print('and ' + last)
